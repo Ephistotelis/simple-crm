@@ -7,9 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
+import { DashboardmainComponent } from './dashboardmain/dashboardmain.component';
+import { UsermainComponent } from './usermain/usermain.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardmainComponent,
+    UsermainComponent
   ],
   imports: [
     BrowserModule,

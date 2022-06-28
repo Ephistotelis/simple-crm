@@ -2,9 +2,45 @@
     height: 100vh;
     .mat-icon {
         margin-right: 20px;
-        &:hover {
-            transform: scale(1.2);
-            cursor: pointer;
+    }
+    .toolbar-row {
+        height: 70px;
+    }
+    .sidenav-content {
+        position: sticky;
+        top: 0;
+    }
+    .sidenav {
+        min-width: 300px;
+        .logo {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 9px;
+            max-height: 70px;
         }
     }
+    li {
+        list-style: none;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        height: 48px;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.2);
+            mat-icon {
+                transform: scale(1.4);
+            }
+        }
+    }
+}
+
+mat-toolbar-row {
+    max-height: 70px;
+}
+
+.maincontent {
+    background-color: grey;
+    height: 100vh;
 }
