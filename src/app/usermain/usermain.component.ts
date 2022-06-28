@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { UseradddialogComponent } from '../useradddialog/useradddialog.component';
 
 @Component({
   selector: 'app-usermain',
@@ -7,7 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsermainComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
+
+  openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
+    this.dialog.open(UseradddialogComponent, {
+      width: '250px',
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
+  }
 
   ngOnInit(): void {
   }
