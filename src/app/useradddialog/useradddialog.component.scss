@@ -1,0 +1,25 @@
+.wholeDialogCard {
+    text-align: center;
+    button {
+        margin-right: 8px;
+    }
+    .dialog-row {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+}
+
+.loading-bar {
+    position: relative;
+    mat-progress-bar {
+        position: absolute;
+        left: -24px;
+        right: -24px;
+        top: -24px;
+    }
+}
+
+.mat-progress-bar {
+    width: calc(100% + 48px);
+}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { User } from 'src/models/user.class';
 import { UseradddialogComponent } from '../useradddialog/useradddialog.component';
 
 @Component({
@@ -13,7 +14,7 @@ export class UsermainComponent implements OnInit {
 
   openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(UseradddialogComponent, {
-      width: '250px',
+      width: 'auto',
       enterAnimationDuration,
       exitAnimationDuration,
     });
