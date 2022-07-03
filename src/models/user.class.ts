@@ -1,3 +1,5 @@
+import { zip } from "rxjs";
+
 export class User {
     firstName: string;
     lastName: string;
@@ -15,5 +17,17 @@ export class User {
         this.zipCode = obj ? obj.zipCode : '';
         this.city = obj ? obj.city : '';
         this.userName = obj ? obj.userName : '';
+    }
+
+    public toJson(){
+       return {
+           firstName: this.firstName,
+           lastName: this.lastName,
+           birthday: this.birthday,
+           street: this.street,
+           zipCode: this.zipCode,
+           city: this.city,
+           userName: this.userName,
+        }
     }
 }

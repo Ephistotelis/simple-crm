@@ -1,4 +1,20 @@
-<p id="testid">usermain works!</p>
+<mat-card>
+    <table>
+        <tr>
+            <th>Role</th>
+            <th>Full Name</th>
+            <th>E-Mail</th>
+        </tr>
+        <tr *ngFor="let user of userList2, let i = index">
+            <td>{{ i + 1}}</td>
+            <td> {{ user['firstName']}} {{user['lastName']}} </td>
+            <td>testmail.com</td>
+        </tr>
+    </table>
+
+</mat-card>
+
+<!-- add user button -->
 <div class="add-user-btn">
     <button mat-fab color="primary" matTooltip="Add User" [matTooltipPosition]="'left'" (click)="openDialog('0ms', '0ms')">
       <mat-icon>add</mat-icon>

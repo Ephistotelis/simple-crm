@@ -5,6 +5,22 @@
     z-index: 1;
 }
 
-#testid {
-    margin: 0;
+mat-card {
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 16px;
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        th {
+            color: rgba(0, 0, 0, 0.6);
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
+    th,
+    td {
+        border: 1px solid black;
+        text-align: start;
+        padding: 8px;
+    }
 }

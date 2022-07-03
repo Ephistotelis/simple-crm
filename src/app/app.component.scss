@@ -21,6 +21,9 @@
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             padding: 9px;
             max-height: 70px;
+            img {
+                object-fit: contain;
+            }
         }
     }
     li {
@@ -49,6 +52,5 @@ mat-toolbar-row {
 }
 
 .maincontent {
-    background-color: grey;
     height: 100vh;
 }

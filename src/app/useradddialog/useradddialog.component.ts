@@ -5,6 +5,7 @@ import {FormControl, Validators} from '@angular/forms';
 import { User } from 'src/models/user.class';
 import { Firestore } from '@angular/fire/firestore';
 import { collection, doc, getDoc, setDoc } from 'firebase/firestore';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 
 @Component({
@@ -16,26 +17,31 @@ export class UseradddialogComponent implements OnInit {
   email = new FormControl('', [Validators.required, Validators.email]);
   user = new User();
   birthDate: Date;
+ 
 
 
-
-  constructor(public dialogRef: MatDialogRef<UsermainComponent>, private firestore: Firestore) {
+  constructor(public dialogRef: MatDialogRef<UsermainComponent>, private firestore: AngularFirestore) {
    }
 
   ngOnInit(): void {
   }
 
 
-  saveUser(){
-    const coll = collection(this.firestore, 'users')
+ /*  saveUser(){
     this.user.birthday = this.birthDate.getTime()
-    setDoc(doc(coll), {user: JSON.stringify(this.user)})
+    this.firestore.collection('users').add(this.user.toJson()).then((result: any)=>{
+      console.log('Added user finished:', result)
+    })
+    console.log('user created:', this.user )
+  }
+ */
+  saveUserJson(){
+    this.user.birthday = this.birthDate.getTime()
+    this.firestore.collection('users').add({user: JSON.stringify(this.user)}).then((result: any)=>{
+      console.log('Added user finished:', result)
+    })
     console.log('user created:', this.user )
   }
 
-  getUser(){
-    const coll = collection(this.firestore, 'users')
-    let thisDoc = getDoc(doc(coll, 'HP1COggJiLZsNSSXfLhr'))
-    console.log(thisDoc)
-  }
+  
 }
