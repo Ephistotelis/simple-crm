@@ -32,7 +32,7 @@ export class UsermainComponent implements OnInit {
 
 
    loadUsers(){
-    this.firestore.collection('users').valueChanges().subscribe((changes: any)=>{
+    this.firestore.collection('users').valueChanges({idField: 'customIdName'}).subscribe((changes: any)=>{
       console.log('Received changes from DB', changes)
       this.userList = changes;
     })

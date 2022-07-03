@@ -45,7 +45,7 @@
         <div class="dialog-row">
             <mat-form-field appearance="outline">
                 <mat-label>Enter your email</mat-label>
-                <input matInput placeholder="yourmail@example.com" [formControl]="email" required>
+                <input matInput placeholder="yourmail@example.com" [formControl]="email" [(ngModel)]="user.email" required>
                 <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
             </mat-form-field>
             <mat-form-field appearance="outline">

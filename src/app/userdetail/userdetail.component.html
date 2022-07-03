@@ -1,0 +1,49 @@
+<div class="card">
+    <mat-card>
+        <div class="card-header">
+            <div>
+                <h3>{{ user['firstName'] }} {{user['lastName']}}</h3>
+                <p> {{ user['email']}}</p>
+            </div>
+            <div>
+                <img class="avatar" src="assets/img/avatar.png" alt="">
+            </div>
+        </div>
+        <div class="details">
+            <div class="category-row">
+                <div><img src="assets/img/pin-32.png" alt=""></div>
+                <div>
+                    <b>Adress:</b>
+                    <div>
+                        <div class="margin"><b>City:</b>
+                            <p class="cGrey margin">{{ user['city']}}</p>
+                        </div>
+                        <div class="margin"><b>Street:</b>
+                            <p class="cGrey margin">{{ user['street']}}</p>
+                        </div>
+                        <div class="margin"><b>Zip Code:</b>
+                            <p class="cGrey margin">{{ user['zipCode']}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="category-row">
+                <div><img src="assets/img/calendar-32.png" alt=""></div>
+                <div>
+                    <div><b>Birth Date:</b></div>
+                    <div class="margin cGrey">{{ birthday}}</div>
+                </div>
+            </div>
+            <div class="category-row">
+                <div><img src="assets/img/line-32.png" alt=""></div>
+                <div>
+                    <div><b>User-ID:</b></div>
+                    <div class="margin cGrey">{{ user['customIdField']}}</div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </mat-card>
+</div>
