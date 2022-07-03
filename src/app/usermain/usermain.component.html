@@ -5,10 +5,10 @@
             <th>Full Name</th>
             <th>E-Mail</th>
         </tr>
-        <tr *ngFor="let user of userList2, let i = index">
-            <td>{{ i + 1}}</td>
-            <td> {{ user['firstName']}} {{user['lastName']}} </td>
-            <td>testmail.com</td>
+        <tr *ngFor="let user of userList, let i = index">
+            <td>{{ user['role']}}</td>
+            <td>{{ user['firstName']}} {{user['lastName']}}</td>
+            <td>{{ user['email']}}</td>
         </tr>
     </table>
 

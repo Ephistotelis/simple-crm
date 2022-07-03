@@ -42,14 +42,22 @@
                 <!-- <mat-hint>Please enter a name</mat-hint> -->
             </mat-form-field>
         </div>
-        <mat-form-field appearance="outline">
-            <mat-label>User Name</mat-label>
-            <input matInput placeholder="User Name" [(ngModel)]="user.userName" required>
-            <!-- <mat-hint>Please enter a username</mat-hint> -->
-        </mat-form-field>
+        <div class="dialog-row">
+            <mat-form-field appearance="outline">
+                <mat-label>Enter your email</mat-label>
+                <input matInput placeholder="yourmail@example.com" [formControl]="email" required>
+                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>User Name</mat-label>
+                <input matInput placeholder="User Name" [(ngModel)]="user.userName" required>
+                <!-- <mat-hint>Please enter a username</mat-hint> -->
+            </mat-form-field>
+        </div>
+
     </div>
     <div mat-dialog-actions>
         <button mat-button mat-dialog-close>Cancel</button>
-        <button mat-button mat-dialog-close (click)="saveUserJson()">Save</button>
+        <button mat-button mat-dialog-close (click)="saveUser()">Save</button>
     </div>
 </div>

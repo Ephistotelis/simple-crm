@@ -18,7 +18,7 @@ export class UseradddialogComponent implements OnInit {
   user = new User();
   birthDate: Date;
  
-
+  
 
   constructor(public dialogRef: MatDialogRef<UsermainComponent>, private firestore: AngularFirestore) {
    }
@@ -27,21 +27,29 @@ export class UseradddialogComponent implements OnInit {
   }
 
 
- /*  saveUser(){
+   saveUser(){
     this.user.birthday = this.birthDate.getTime()
     this.firestore.collection('users').add(this.user.toJson()).then((result: any)=>{
       console.log('Added user finished:', result)
     })
     console.log('user created:', this.user )
   }
- */
-  saveUserJson(){
+
+  
+  getErrorMessage() {
+    if (this.email.hasError('required')) {
+      return 'You must enter a value';
+    }
+
+    return this.email.hasError('email') ? 'Not a valid email' : '';
+  }
+  /* saveUserJson(){    DELETED SOON OLD VERSION
     this.user.birthday = this.birthDate.getTime()
     this.firestore.collection('users').add({user: JSON.stringify(this.user)}).then((result: any)=>{
       console.log('Added user finished:', result)
     })
     console.log('user created:', this.user )
-  }
+  } */
 
   
 }

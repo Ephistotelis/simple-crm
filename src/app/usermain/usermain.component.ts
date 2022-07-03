@@ -11,7 +11,7 @@ import { UseradddialogComponent } from '../useradddialog/useradddialog.component
 })
 export class UsermainComponent implements OnInit {
   userList: Array<any> = [];
-  userList2: Array<any> = [];
+  //userList2: Array<any> = [];     DELETED SOON OLD VERSION
 
 
 
@@ -27,19 +27,19 @@ export class UsermainComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.loadUsersJson()
+    this.loadUsers()
   }
 
 
-  /* loadUsers(){
+   loadUsers(){
     this.firestore.collection('users').valueChanges().subscribe((changes: any)=>{
       console.log('Received changes from DB', changes)
       this.userList = changes;
     })
-  } */
+  } 
 
 
-  loadUsersJson(){
+  /* loadUsersJson(){     DELETED SOON OLD VERSION
     this.firestore.collection('users').valueChanges().subscribe((changes: any)=>{
       console.log('Received changes from DB', changes)
       changes.forEach(data => {
@@ -47,5 +47,5 @@ export class UsermainComponent implements OnInit {
         this.userList2.push(user)
       });
     })
-  }
+  } */
 }
