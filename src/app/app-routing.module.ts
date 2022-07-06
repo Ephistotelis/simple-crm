@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardmainComponent } from './dashboardmain/dashboardmain.component';
+import { EdituserdetailComponent } from './edituserdetail/edituserdetail.component';
 import { UserdetailComponent } from './userdetail/userdetail.component';
 import { UsermainComponent } from './usermain/usermain.component';
 

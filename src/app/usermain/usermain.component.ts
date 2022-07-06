@@ -17,11 +17,9 @@ export class UsermainComponent implements OnInit {
 
   constructor(public dialog: MatDialog, private firestore: AngularFirestore) { }
 
-  openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
+  openDialog(): void {
     this.dialog.open(UseradddialogComponent, {
-      width: 'auto',
-      enterAnimationDuration,
-      exitAnimationDuration,
+      width: 'auto'
     });
   }
 

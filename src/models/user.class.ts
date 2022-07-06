@@ -10,6 +10,7 @@ export class User {
     userName: string;
     role: string;
     email: string;
+    customIdField: string;
     constructor(obj?: any){
         this.firstName = obj ? obj.firstName : '';
         this.lastName = obj ? obj.lastName : '';
@@ -19,7 +20,8 @@ export class User {
         this.city = obj ? obj.city : '';
         this.userName = obj ? obj.userName : '';
         this.role = obj ? obj.role : 'User';
-        this.email = obj ? obj.email : 'Error';
+        this.email = obj ? obj.email : '';
+        this.customIdField = obj ? obj.customIdField : '';
     }
 
     public toJson(){

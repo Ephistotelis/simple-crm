@@ -25,14 +25,16 @@ import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 import { AngularFireModule} from '@angular/fire/compat';
 import { UserdetailComponent } from './userdetail/userdetail.component'
-
+import {MatMenuModule} from '@angular/material/menu';
+import { EdituserdetailComponent } from './edituserdetail/edituserdetail.component';
 @NgModule({
   declarations: [
     AppComponent,
     DashboardmainComponent,
     UsermainComponent,
     UseradddialogComponent,
-    UserdetailComponent
+    UserdetailComponent,
+    EdituserdetailComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +55,7 @@ import { UserdetailComponent } from './userdetail/userdetail.component'
     MatProgressBarModule,
     MatCardModule,
     MatTableModule,
+    MatMenuModule,
     AngularFireModule.initializeApp(environment.firebase)
     /* provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()), */ 
