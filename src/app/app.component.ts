@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+ 
+  constructor(private firestore: AngularFirestore){
+
+  }
+
+
+
 }

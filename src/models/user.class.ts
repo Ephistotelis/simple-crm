@@ -35,6 +35,7 @@ export class User {
            userName: this.userName,
            role: this.role,
            email: this.email,
+           customIdField: this.customIdField,
         }
     }
 }

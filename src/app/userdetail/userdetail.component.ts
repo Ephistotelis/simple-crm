@@ -12,7 +12,7 @@ import { EdituserdetailComponent } from '../edituserdetail/edituserdetail.compon
 })
 export class UserdetailComponent implements OnInit {
   
-params: any = '';
+params: string = '';
 user: User = new User(); // to avoid error message user.firstname etc. not found
 birthdayWhole: Date;
 birthdayYMD: string;

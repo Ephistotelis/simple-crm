@@ -1,3 +1,46 @@
-#testid {
-    margin: 0;
+.card {
+    padding: 16px;
+    .header {
+        text-align: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 16px;
+        padding-top: 8px;
+    }
+    .main {
+        .main-top {
+            display: flex;
+            justify-content: space-between;
+            padding: 16px;
+            .left-div {
+                width: 50%;
+                table {
+                    width: 50%;
+                    td {
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+            .right-div {
+                table {
+                    text-align: center;
+                    td {
+                        padding-top: 10px;
+                    }
+                }
+            }
+        }
+        .main-middle {
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 16px;
+            border-radius: 16px;
+            .table-div {
+                width: 100%;
+                table {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
 }

@@ -27,6 +27,7 @@ import { AngularFireModule} from '@angular/fire/compat';
 import { UserdetailComponent } from './userdetail/userdetail.component'
 import {MatMenuModule} from '@angular/material/menu';
 import { EdituserdetailComponent } from './edituserdetail/edituserdetail.component';
+import { TodomainComponent } from './todomain/todomain.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { EdituserdetailComponent } from './edituserdetail/edituserdetail.compone
     UsermainComponent,
     UseradddialogComponent,
     UserdetailComponent,
-    EdituserdetailComponent
+    EdituserdetailComponent,
+    TodomainComponent
   ],
   imports: [
     BrowserModule,

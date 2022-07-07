@@ -1,5 +1,5 @@
 <mat-drawer-container class="mat-drawer-container" autosize>
-    <mat-drawer #drawer class="sidenav" mode="side" [opened]="true">
+    <mat-drawer #drawer class="sidenav" mode="side" [opened]="false">
         <div class="logo">
             <img src="./assets/img/logo.png" alt="">
         </div>
@@ -9,6 +9,9 @@
             </li>
             <li routerLink="/usermain">
                 <mat-icon>person</mat-icon>User
+            </li>
+            <li routerLink="/user/:id/todos">
+                <mat-icon>apps</mat-icon>My To-Do´s
             </li>
         </ul>
     </mat-drawer>
