@@ -28,6 +28,10 @@ import { UserdetailComponent } from './userdetail/userdetail.component'
 import {MatMenuModule} from '@angular/material/menu';
 import { EdituserdetailComponent } from './edituserdetail/edituserdetail.component';
 import { TodomainComponent } from './todomain/todomain.component';
+import {MatSelectModule} from '@angular/material/select';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,6 +62,7 @@ import { TodomainComponent } from './todomain/todomain.component';
     MatCardModule,
     MatTableModule,
     MatMenuModule,
+    MatSelectModule,
     AngularFireModule.initializeApp(environment.firebase)
     /* provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()), */ 

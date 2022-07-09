@@ -39,6 +39,11 @@
                 table {
                     width: 100%;
                     text-align: center;
+                    td {
+                        button {
+                            margin-left: 16px;
+                        }
+                    }
                 }
             }
         }

@@ -8,20 +8,16 @@
                 <div class="left-div">
                     <table>
                         <tr>
-                            <td>Account Count:</td>
-                            <td>9</td>
-                        </tr>
-                        <tr>
                             <td>Active Admins:</td>
-                            <td>1</td>
+                            <td>{{ allUsers.admins }}</td>
                         </tr>
                         <tr>
                             <td>Active Editors:</td>
-                            <td>3</td>
+                            <td>{{ allUsers.editors }}</td>
                         </tr>
                         <tr>
                             <td>Active Users:</td>
-                            <td>5</td>
+                            <td>{{ allUsers.users }}</td>
                         </tr>
                     </table>
                 </div>
@@ -29,7 +25,7 @@
                     <table>
                         <th>Created Accounts</th>
                         <tr>
-                            <td>9</td>
+                            <td>{{ allUsers.allUsers }}</td>
                         </tr>
                     </table>
                 </div>
@@ -41,26 +37,25 @@
                         <th>User-ID</th>
                         <th>User Fullname</th>
                         <th>Current Role</th>
-                        <tr>
-                            <td>id</td>
-                            <td>full name</td>
-                            <td>role</td>
-                            <td>role-selector</td>
-                        </tr>
-                        <tr>
-                            <td>id</td>
-                            <td>full name</td>
-                            <td>role</td>
-                            <td>role-selector</td>
-                        </tr>
-                        <tr>
-                            <td>id</td>
-                            <td>full name</td>
-                            <td>role</td>
-                            <td>role-selector</td>
+                        <tr *ngFor="let user of Users, let i = index">
+                            <td>{{ user.customIdField}}</td>
+                            <td>{{ user.firstName }} {{ user.lastName }}</td>
+                            <td>{{ user.role }}</td>
+                            <td>
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Select a Role</mat-label>
+                                    <mat-select disableRipple [(ngModel)]="Users[i]['role']">
+                                        <mat-option value="User">User</mat-option>
+                                        <mat-option value="Admin">Admin</mat-option>
+                                        <mat-option value="Editor">Editor</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                                <button mat-raised-button (click)="updateUserRole( user.customIdField, i )">Confirm Changes</button>
+                            </td>
                         </tr>
                     </table>
                 </div>
+
             </div>
         </div>
     </mat-card>
