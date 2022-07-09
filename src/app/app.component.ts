@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
+
 
 
 @Component({
@@ -10,7 +10,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 export class AppComponent {
 
  
-  constructor(private firestore: AngularFirestore){
+  constructor(){
 
   }
 

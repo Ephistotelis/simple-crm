@@ -13,6 +13,9 @@
             <li routerLink="/user/:id/todos">
                 <mat-icon>apps</mat-icon>My To-Do´s
             </li>
+            <li>
+                <a routerLink="login">Login</a>
+            </li>
         </ul>
     </mat-drawer>
     <div class="sidenav-content">
@@ -25,5 +28,6 @@
     </div>
     <div class="maincontent">
         <router-outlet></router-outlet>
+        <router-outlet name="login"></router-outlet>
     </div>
 </mat-drawer-container>

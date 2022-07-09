@@ -29,6 +29,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import { EdituserdetailComponent } from './edituserdetail/edituserdetail.component';
 import { TodomainComponent } from './todomain/todomain.component';
 import {MatSelectModule} from '@angular/material/select';
+import { LoginComponent } from './login/login.component';
+import { MainsideComponent } from './mainside/mainside.component';
 
 
 
@@ -40,7 +42,9 @@ import {MatSelectModule} from '@angular/material/select';
     UseradddialogComponent,
     UserdetailComponent,
     EdituserdetailComponent,
-    TodomainComponent
+    TodomainComponent,
+    LoginComponent,
+    MainsideComponent
   ],
   imports: [
     BrowserModule,
