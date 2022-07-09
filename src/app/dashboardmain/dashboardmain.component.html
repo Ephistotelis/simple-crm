@@ -40,7 +40,7 @@
                         <tr *ngFor="let user of Users, let i = index">
                             <td>{{ user.customIdField}}</td>
                             <td>{{ user.firstName }} {{ user.lastName }}</td>
-                            <td>{{ user.role }}</td>
+                            <td class="{{ Users[i]['role'] }}">{{ user.role }}</td>
                             <td>
                                 <mat-form-field appearance="fill">
                                     <mat-label>Select a Role</mat-label>
