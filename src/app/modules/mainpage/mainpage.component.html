@@ -1,0 +1,29 @@
+<mat-drawer-container class="mat-drawer-container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side" [opened]="false">
+        <div class="logo">
+            <img src="./assets/img/logo.png" alt="">
+        </div>
+        <ul>
+            <li routerLink="/mainpage">
+                <mat-icon>space_dashboard</mat-icon>Admin-Dashboard
+            </li>
+            <li routerLink="/mainpage/usermain">
+                <mat-icon>person</mat-icon>User List
+            </li>
+            <!-- <li routerLink="/user/:id/todos">
+                <mat-icon>apps</mat-icon>My To-Do´s
+            </li> -->
+        </ul>
+    </mat-drawer>
+    <div class="sidenav-content">
+        <mat-toolbar color="primary">
+            <mat-toolbar-row class="toolbar-row">
+                <mat-icon class="mat-icon" (click)="drawer.toggle()" id="menu">menu</mat-icon>
+                <span>Simple CRM</span>
+            </mat-toolbar-row>
+        </mat-toolbar>
+    </div>
+    <div class="maincontent">
+        <router-outlet></router-outlet>
+    </div>
+</mat-drawer-container>
