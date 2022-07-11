@@ -6,13 +6,15 @@ import { LoginComponent } from './login.component';
 import { AuthenticationServiceComponent } from './authentication-service/authentication-service.component';
 import { AuthGuardComponent } from './auth-guard/auth-guard.component';
 import { FormsModule } from '@angular/forms';
+import { LoginFailedComponent } from './login-failed/login-failed.component';
 
 
 @NgModule({
   declarations: [
     LoginComponent,
     AuthenticationServiceComponent,
-    AuthGuardComponent
+    AuthGuardComponent,
+    LoginFailedComponent
   ],
   imports: [
     CommonModule,

@@ -31,7 +31,8 @@ export class AuthenticationServiceComponent implements OnInit {
       console.log('You´re signed in!', res['user']['uid'])
       this.router.navigateByUrl('mainpage/usermain')
     }).catch(error=>{
-      console.log('Something went wrong...', error)
+      console.log('Something went wrong...', error);
+      this.router.navigateByUrl('loginfailed')
     })
   }
 
