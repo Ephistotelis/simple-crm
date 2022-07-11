@@ -32,6 +32,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { LoginModule } from '../login/login.module';
 import { LogoutModule } from '../logout/logout.module';
 import { environment } from 'src/environments/environment';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { environment } from 'src/environments/environment';
     UserdetailComponent,
     EdituserdetailComponent,
     TodomainComponent,
+    FooterComponent,
 
   ],
   imports: [
